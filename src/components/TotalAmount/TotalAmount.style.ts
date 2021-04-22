@@ -9,22 +9,17 @@ export const TotalAmountWrapper = styled.div`
 `;
 
 export const TotalAmountTopInfo = styled.div`
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 2rem;
 `;
 
 export const TotalAmountDescription = styled.p`
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
   font-size: 1.5rem;
   color: #202a31;
 `;
 
 export const TotalAmountValue = styled.p`
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
   text-align: right;
   font-size: 2rem;
   font-weight: bold;
