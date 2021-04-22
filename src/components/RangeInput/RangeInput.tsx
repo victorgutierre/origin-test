@@ -1,14 +1,25 @@
 import React from 'react';
+import {
+  RangeInputWrapper,
+  Label,
+  RangeInputBox,
+  Text,
+  Decrease,
+  Increase
+} from './RangeInput.style';
 
 export const RangeInput = () => {
   return (
-    <div>
-      <span>Reach goal by</span>
-      <div>
-        <div> - </div>
-        <div> October 2021 </div>
-        <div> + </div>
-      </div>
-    </div>
-  )
+    <RangeInputWrapper>
+      <Label>Reach goal by</Label>
+
+      <RangeInputBox>
+        <Decrease />
+        <Text>
+          <b>October</b> 2021
+        </Text>
+        <Increase />
+      </RangeInputBox>
+    </RangeInputWrapper>
+  );
 };
