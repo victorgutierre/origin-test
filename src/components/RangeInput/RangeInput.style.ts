@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import arrow from './../../icons/arrow.svg';
 
 export const RangeInputWrapper = styled.div`
-  width: 40%;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    width: 40%;
+  }
 `;
 
 export const Label = styled.p`
-  display: block;
   margin-bottom: 0.5rem;
   color: #202a31;
   font-size: 1rem;

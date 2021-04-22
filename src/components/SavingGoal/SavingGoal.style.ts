@@ -37,5 +37,9 @@ export const Title = styled.div`
 `;
 
 export const FieldsWrapper = styled.div`
-  display: flex;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `;

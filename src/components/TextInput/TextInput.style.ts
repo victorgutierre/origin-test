@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const TextInputWrapper = styled.div`
-  width: 60%;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    width: 60%;
+    margin-right: 2rem;
+  }
 `;
 
 export const Label = styled.p`
@@ -14,8 +20,7 @@ export const Label = styled.p`
 
 export const TextInputBox = styled.div`
   position: relative;
-  margin-right: 2rem;
-
+ 
   span {
     position: absolute;
     color: #cdd5db;

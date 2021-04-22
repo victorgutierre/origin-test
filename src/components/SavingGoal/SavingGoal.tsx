@@ -1,7 +1,12 @@
 import React from 'react';
 import { TextInput, RangeInput, TotalAmount, Button } from './../index';
 import houseImg from './../../icons/academy.svg';
-import { SavingGoalBox, Header, Title, FieldsWrapper } from './SavingGoal.style';
+import {
+  SavingGoalBox,
+  Header,
+  Title,
+  FieldsWrapper
+} from './SavingGoal.style';
 
 export const SavingGoal = () => {
   return (

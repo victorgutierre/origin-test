@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const TotalAmountWrapper = styled.div`
   display: block;
   width: 100%;
-  margin: 2rem 0;
   border-radius: 8px;
   border: 1px solid #eaeef2;
 `;
