@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Header, HeadLine, SavingGoal } from './components/index';
+import { GlobalStyle } from './styles/globalStyles';
 
 const App: React.FunctionComponent = () => {
   return (
     <div>
+      <GlobalStyle />
       <Header />
-      <HeadLine />
+      <HeadLine firstSentence="Let's plan your" boldSentence="saving goal." />
       <SavingGoal />
     </div>
   );
