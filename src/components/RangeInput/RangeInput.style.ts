@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import arrow from './../../icons/arrow.svg';
 
 export const RangeInputWrapper = styled.div`
   width: 40%;
@@ -15,14 +16,14 @@ export const Label = styled.p`
 export const RangeInputBox = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  height: 4rem;
+  padding: 0.625rem 1rem;
   border-radius: 8px;
   border: 1px solid #eaeef2;
   position: relative;
 `;
 
 export const Text = styled.p`
-  color: red;
   margin: 0 1rem;
   text-align: center;
   vertical-align: middle;
@@ -31,52 +32,29 @@ export const Text = styled.p`
   b {
     display: block;
     color: #000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
   }
 `;
 
 export const Decrease = styled.div`
+  display: block;
   cursor: pointer;
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    height: 1rem;
-    margin-top: -13px;
-    position: absolute;
-    transform: rotate(-135deg);
-    left: 1rem;
-    top: 50%;
-    width: 0;
-    border-right: 2px solid #8d9ca8;
-  }
-
-  &:after {
-    margin-top: -3px;
-    transform: rotate(-45deg);
-  }
+  margin-top: 0.5rem;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(${arrow});
 `;
 
 export const Increase = styled.div`
+  display: block;
   cursor: pointer;
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    height: 1rem;
-    margin-top: -13px;
-    position: absolute;
-    transform: rotate(135deg);
-    right: 1rem;
-    top: 50%;
-    width: 0;
-    border-right: 2px solid #8d9ca8;
-  }
-
-  &:after {
-    margin-top: -3px;
-    transform: rotate(45deg);
-  }
+  margin-top: 0.5rem;
+  width: 24px;
+  height: 24px;
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(${arrow});
 `;

@@ -1,5 +1,10 @@
 import React from 'react';
-import { TextInputWrapper, Label, TextInputBox, Input } from './TextInput.style';
+import {
+  TextInputWrapper,
+  Label,
+  TextInputBox,
+  Input
+} from './TextInput.style';
 
 export const TextInput = () => {
   return (

@@ -1,19 +1,23 @@
 import React from 'react';
 import { TextInput, RangeInput, TotalAmount, Button } from './../index';
 import houseImg from './../../icons/academy.svg';
-import { SavingGoalBox } from './SavingGoal.style';
+import { SavingGoalBox, Header, Title, FieldsWrapper } from './SavingGoal.style';
 
 export const SavingGoal = () => {
   return (
     <SavingGoalBox>
-      <div>
+      <Header>
         <img src={houseImg}></img>
-        <p>Buy a house</p>
-        <p>Saving goal</p>
-      </div>
+        <Title>
+          <p>Buy a house</p>
+          <span>Saving goal</span>
+        </Title>
+      </Header>
 
-      <TextInput />
-      <RangeInput />
+      <FieldsWrapper>
+        <TextInput />
+        <RangeInput />
+      </FieldsWrapper>
       <TotalAmount />
       <Button />
     </SavingGoalBox>

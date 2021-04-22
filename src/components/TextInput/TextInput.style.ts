@@ -14,6 +14,7 @@ export const Label = styled.p`
 
 export const TextInputBox = styled.div`
   position: relative;
+  margin-right: 2rem;
 
   span {
     position: absolute;
@@ -27,6 +28,8 @@ export const TextInputBox = styled.div`
 `;
 
 export const Input = styled.input`
+  width: 100%;
+  height: 4rem;
   padding: 1rem 1rem 1rem 2.5rem;
   font-size: 1.5rem;
   font-weight: bold;
