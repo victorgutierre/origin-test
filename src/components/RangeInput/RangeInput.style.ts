@@ -3,7 +3,7 @@ import arrow from './../../icons/arrow.svg';
 
 export const RangeInputWrapper = styled.div`
   width: 100%;
-  
+
   @media screen and (min-width: 768px) {
     width: 40%;
   }
@@ -27,7 +27,7 @@ export const RangeInputBox = styled.div`
 `;
 
 export const Text = styled.p`
-  margin: 0 1rem;
+  width: 100%;
   text-align: center;
   vertical-align: middle;
   color: #748695;
@@ -39,25 +39,24 @@ export const Text = styled.p`
   }
 `;
 
-export const Decrease = styled.div`
+export const Decrease = styled.button`
   display: block;
   cursor: pointer;
+  outline: 0;
+  border: 0;
   margin-top: 0.5rem;
   width: 24px;
   height: 24px;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(${arrow});
+
+  &:disabled {
+    cursor: auto;
+  }
 `;
 
-export const Increase = styled.div`
-  display: block;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  width: 24px;
-  height: 24px;
+export const Increase = styled(Decrease)`
   transform: rotate(180deg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(${arrow});
 `;
