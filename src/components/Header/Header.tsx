@@ -1,12 +1,11 @@
 import React from 'react';
 import { HeaderContainer } from './Header.style';
+interface Props {
+  logo: string;
+}
 
-const logo = require('./../../icons/logo.svg') as string;
-
-export const Header = () => {
-  return (
-    <HeaderContainer>
-      <img src={logo} width="100" height="50" />
-    </HeaderContainer>
-  );
-};
+export const Header: React.FC<Props> = ({ logo }) => (
+  <HeaderContainer>
+    <img src={logo} width="100" height="50" />
+  </HeaderContainer>
+);
