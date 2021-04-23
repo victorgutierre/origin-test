@@ -1,4 +1,5 @@
 import React from 'react';
+import { months } from './../../utils/months';
 import {
   TotalAmountWrapper,
   TotalAmountTopInfo,
@@ -7,7 +8,18 @@ import {
   TotalAmountValue
 } from './TotalAmount.style';
 
-export const TotalAmount = () => {
+interface Props {
+  year: number;
+  month: number;
+  differenceYearsInMonths: number;
+}
+
+export const TotalAmount: React.FC<Props> = ({
+  year,
+  month,
+  differenceYearsInMonths
+}) => {
+
   return (
     <TotalAmountWrapper>
       <TotalAmountTopInfo>
@@ -17,8 +29,12 @@ export const TotalAmount = () => {
 
       <TotalAmountDetails>
         <p>
-          You're planning <b>48 monthly deposits</b> to reach your
-          <b>$ 25,000</b> goal by <b>October 2020.</b>
+          You're planning <b>{differenceYearsInMonths} monthly deposits</b> to
+          reach your
+          <b>$ 25,000</b> goal by{' '}
+          <b>
+            {months[month]} {year}.
+          </b>
         </p>
       </TotalAmountDetails>
     </TotalAmountWrapper>

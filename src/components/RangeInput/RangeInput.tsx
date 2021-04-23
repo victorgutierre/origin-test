@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { months } from './../../utils/months';
 import {
   RangeInputWrapper,
   Label,
@@ -7,31 +8,27 @@ import {
   Decrease,
   Increase
 } from './RangeInput.style';
+interface Props {
+  actualMonth: number;
+  actualYear: number;
+  month: number;
+  year: number;
+  differenceYearsInMonths: number;
+  setMonth: (arg: number) => void;
+  setYear: (arg: number) => void;
+  setYearsInMonths: (arg: number) => void;
+}
 
-export const RangeInput = () => {
-  const actualDate = new Date();
-  const actualFullYear = actualDate.getFullYear();
-  const actualMonth = actualDate.getMonth();
-  const defaultYearPlanning = 4;
-
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ];
-
-  const [month, setMonth] = useState(actualMonth);
-  const [year, setYear] = useState(actualFullYear + defaultYearPlanning);
-
+export const RangeInput: React.FC<Props> = ({
+  actualMonth,
+  actualYear,
+  month,
+  year,
+  differenceYearsInMonths,
+  setMonth,
+  setYear,
+  setYearsInMonths
+}) => {
   const increase = () => {
     if (month === 11) {
       setYear(year + 1);
@@ -39,6 +36,8 @@ export const RangeInput = () => {
     } else {
       setMonth(month + 1);
     }
+
+    setYearsInMonths(differenceYearsInMonths + 1);
   };
 
   const decrease = () => {
@@ -48,9 +47,11 @@ export const RangeInput = () => {
     } else {
       setMonth(month - 1);
     }
+
+    setYearsInMonths(differenceYearsInMonths - 1);
   };
 
-  const disableButton = () => month === actualMonth && year === actualFullYear;
+  const disableButton = () => month === actualMonth && year === actualYear;
 
   return (
     <RangeInputWrapper>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextInput, RangeInput, TotalAmount, Button } from './../index';
 import houseImg from './../../icons/academy.svg';
 import {
@@ -9,6 +9,17 @@ import {
 } from './SavingGoal.style';
 
 export const SavingGoal = () => {
+  const actualDate = new Date();
+  const actualFullYear = actualDate.getFullYear();
+  const actualMonth = actualDate.getMonth();
+  const defaultYearPlanning = 4;
+
+  const differenceYearsInMonths = defaultYearPlanning * 12;
+
+  const [month, setMonth] = useState(actualMonth);
+  const [year, setYear] = useState(actualFullYear + defaultYearPlanning);
+  const [yearsInMonths, setYearsInMonths] = useState(differenceYearsInMonths);
+
   return (
     <SavingGoalBox>
       <Header>
@@ -21,9 +32,22 @@ export const SavingGoal = () => {
 
       <FieldsWrapper>
         <TextInput />
-        <RangeInput />
+        <RangeInput
+          actualYear={actualFullYear}
+          actualMonth={actualMonth}
+          month={month}
+          year={year}
+          differenceYearsInMonths={yearsInMonths}
+          setMonth={setMonth}
+          setYear={setYear}
+          setYearsInMonths={setYearsInMonths}
+        />
       </FieldsWrapper>
-      <TotalAmount />
+      <TotalAmount
+        month={month}
+        year={year}
+        differenceYearsInMonths={yearsInMonths}
+      />
       <Button />
     </SavingGoalBox>
   );
