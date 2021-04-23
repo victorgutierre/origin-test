@@ -1,11 +1,12 @@
 import React from 'react';
-import * as S from './Header.style';
-import logo from './../../icons/logo.svg';
+import { HeaderContainer } from './Header.style';
+
+const logo = require('./../../icons/logo.svg') as string;
 
 export const Header = () => {
   return (
-    <S.Header>
+    <HeaderContainer>
       <img src={logo} width="100" height="50" />
-    </S.Header>
+    </HeaderContainer>
   );
 };
