@@ -48,7 +48,9 @@ export const RangeInput: React.FC<Props> = ({
       setMonth(month - 1);
     }
 
-    setYearsInMonths(differenceYearsInMonths - 1);
+    if (differenceYearsInMonths > 1) {
+      setYearsInMonths(differenceYearsInMonths - 1);
+    }
   };
 
   const disableButton = () => month === actualMonth && year === actualYear;
