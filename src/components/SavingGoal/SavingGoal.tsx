@@ -53,7 +53,7 @@ export const SavingGoal = () => {
         differenceYearsInMonths={yearsInMonths}
         defaultTotalAmount={amount}
       />
-      <Button />
+      <Button label={'Confirm'} />
     </SavingGoalBox>
   );
 };
