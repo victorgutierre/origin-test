@@ -1,22 +1,19 @@
 import React from 'react';
-import { money } from '../../utils/utils';
-import {
-  TextInputWrapper,
-  Label,
-  TextInputBox,
-  Input
-} from './TextInput.style';
+import CurrencyInput from 'react-currency-input';
 
+import { TextInputWrapper, Label, TextInputBox } from './TextInput.style';
 interface Props {
   amount: string;
-  setAmount: () => void;
+  setAmount: (amount: number) => void;
 }
 
 export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
-  const changeAmount = (event) => {
-    const { value } = event.target;
-    console.log(value, money(value));
-    event.target.value = money(value);
+  const changeAmount = (
+    event: object,
+    maskedValue: string,
+    floatValue: number
+  ) => {
+    setAmount(floatValue);
   };
 
   return (
@@ -25,11 +22,7 @@ export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
 
       <TextInputBox>
         <span>$</span>
-        <Input
-          type="text"
-          onChange={event => changeAmount(event)}
-          defaultValue={money(amount)}
-        />
+        <CurrencyInput value={amount} onChangeEvent={changeAmount} />
       </TextInputBox>
     </TextInputWrapper>
   );

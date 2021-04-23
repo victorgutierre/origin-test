@@ -20,7 +20,7 @@ export const SavingGoal = () => {
   const [year, setYear] = useState(actualFullYear + defaultYearPlanning);
   const [yearsInMonths, setYearsInMonths] = useState(differenceYearsInMonths);
 
-  const defaultTotalAmount = '25000';
+  const defaultTotalAmount = 25000;
   const [amount, setAmount] = useState(defaultTotalAmount);
 
   return (
@@ -34,11 +34,8 @@ export const SavingGoal = () => {
       </Header>
 
       <FieldsWrapper>
-        <TextInput
-          amount={amount}
-          setAmount={setAmount}
-        />
-        
+        <TextInput amount={amount} setAmount={setAmount} />
+
         <RangeInput
           actualYear={actualFullYear}
           actualMonth={actualMonth}

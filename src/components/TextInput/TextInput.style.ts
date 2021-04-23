@@ -20,7 +20,7 @@ export const Label = styled.p`
 
 export const TextInputBox = styled.div`
   position: relative;
- 
+
   span {
     position: absolute;
     color: #cdd5db;
@@ -30,17 +30,17 @@ export const TextInputBox = styled.div`
     transform: translateY(-50%);
     z-index: 1;
   }
-`;
 
-export const Input = styled.input`
-  width: 100%;
-  height: 4rem;
-  padding: 1rem 1rem 1rem 2.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 8px;
-  border: 1px solid #eaeef2;
-  position: relative;
-  outline: 0;
-  color: #516473;
+  input[type='text'] {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #eaeef2;
+    position: relative;
+    outline: 0;
+    color: #516473;
+  }
 `;

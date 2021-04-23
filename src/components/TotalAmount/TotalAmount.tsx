@@ -12,7 +12,7 @@ interface Props {
   year: number;
   month: number;
   differenceYearsInMonths: number;
-  defaultTotalAmount: string;
+  defaultTotalAmount: number;
 }
 
 export const TotalAmount: React.FC<Props> = ({
@@ -21,7 +21,9 @@ export const TotalAmount: React.FC<Props> = ({
   differenceYearsInMonths,
   defaultTotalAmount
 }) => {
-  const totalValue = money(defaultTotalAmount / differenceYearsInMonths); 
+  const value = (defaultTotalAmount / differenceYearsInMonths).toString();
+  const totalAmount = defaultTotalAmount.toString();
+  const totalValue = money(value) || '0.00';
 
   return (
     <TotalAmountWrapper>
@@ -33,7 +35,7 @@ export const TotalAmount: React.FC<Props> = ({
       <TotalAmountDetails>
         <p>
           You're planning <b>{differenceYearsInMonths} monthly deposits</b> to
-          reach your <b>${money(defaultTotalAmount)}</b> goal by{' '}
+          reach your <b>${money(totalAmount || '0.00')}</b> goal by{' '}
           <b>
             {months[month]} {year}.
           </b>
