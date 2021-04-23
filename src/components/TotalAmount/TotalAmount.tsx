@@ -1,5 +1,5 @@
 import React from 'react';
-import { months } from './../../utils/months';
+import { months, money } from '../../utils/utils';
 import {
   TotalAmountWrapper,
   TotalAmountTopInfo,
@@ -12,26 +12,28 @@ interface Props {
   year: number;
   month: number;
   differenceYearsInMonths: number;
+  defaultTotalAmount: string;
 }
 
 export const TotalAmount: React.FC<Props> = ({
   year,
   month,
-  differenceYearsInMonths
+  differenceYearsInMonths,
+  defaultTotalAmount
 }) => {
+  const totalValue = money(defaultTotalAmount / differenceYearsInMonths); 
 
   return (
     <TotalAmountWrapper>
       <TotalAmountTopInfo>
         <TotalAmountDescription>Monthly amount</TotalAmountDescription>
-        <TotalAmountValue>$521</TotalAmountValue>
+        <TotalAmountValue>${totalValue}</TotalAmountValue>
       </TotalAmountTopInfo>
 
       <TotalAmountDetails>
         <p>
           You're planning <b>{differenceYearsInMonths} monthly deposits</b> to
-          reach your
-          <b>$ 25,000</b> goal by{' '}
+          reach your <b>${money(defaultTotalAmount)}</b> goal by{' '}
           <b>
             {months[month]} {year}.
           </b>
