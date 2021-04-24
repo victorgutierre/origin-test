@@ -20,7 +20,7 @@ export const SavingGoal = () => {
   const [year, setYear] = useState(actualFullYear + defaultYearPlanning);
   const [yearsInMonths, setYearsInMonths] = useState(differenceYearsInMonths);
 
-  const defaultTotalAmount = 25000;
+  const defaultTotalAmount = '25000';
   const [amount, setAmount] = useState(defaultTotalAmount);
 
   return (

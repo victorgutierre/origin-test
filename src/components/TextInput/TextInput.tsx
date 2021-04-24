@@ -4,14 +4,14 @@ import CurrencyInput from 'react-currency-input';
 import { TextInputWrapper, Label, TextInputBox } from './TextInput.style';
 interface Props {
   amount: string;
-  setAmount: (amount: number) => void;
+  setAmount: (amount: string) => void;
 }
 
 export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
   const changeAmount = (
     event: object,
     maskedValue: string,
-    floatValue: number
+    floatValue: string
   ) => {
     setAmount(floatValue);
   };
@@ -22,7 +22,11 @@ export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
 
       <TextInputBox>
         <span>$</span>
-        <CurrencyInput value={amount} onChangeEvent={changeAmount} />
+        <CurrencyInput
+          data-testid="text-input-currency"
+          value={amount}
+          onChangeEvent={changeAmount}
+        />
       </TextInputBox>
     </TextInputWrapper>
   );
