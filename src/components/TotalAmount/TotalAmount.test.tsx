@@ -1,9 +1,8 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { TotalAmount } from './TotalAmount';
-import { money } from './../../utils/utils';
 
 describe('<TotalAmount />', () => {
   const actualDate = new Date();
