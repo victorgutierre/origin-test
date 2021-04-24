@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TotalAmount /> Should render the TotalAmount component 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.p>
+      Monthly amount
+    </styled.p>
+    <styled.p
+      data-testid="total-amount-monthly-amount"
+    >
+      $
+      520.83
+    </styled.p>
+  </styled.div>
+  <styled.div>
+    <p>
+      You're planning
+       
+      <b
+        data-testid="total-amount-yearsInMonths"
+      >
+        48
+         monthly deposits
+      </b>
+       
+      to reach your
+       
+      <b
+        data-testid="total-amount-value"
+      >
+        $
+        25,000.00
+      </b>
+       
+      goal by
+       
+      <b
+        data-testid="total-amount-date"
+      >
+        April
+         
+        2025
+        .
+      </b>
+    </p>
+  </styled.div>
+</styled.div>
+`;

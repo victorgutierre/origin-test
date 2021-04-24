@@ -29,14 +29,23 @@ export const TotalAmount: React.FC<Props> = ({
     <TotalAmountWrapper>
       <TotalAmountTopInfo>
         <TotalAmountDescription>Monthly amount</TotalAmountDescription>
-        <TotalAmountValue>${totalValue}</TotalAmountValue>
+        <TotalAmountValue data-testid="total-amount-monthly-amount">
+          ${totalValue}
+        </TotalAmountValue>
       </TotalAmountTopInfo>
 
       <TotalAmountDetails>
         <p>
-          You're planning <b>{differenceYearsInMonths} monthly deposits</b> to
-          reach your <b>${money(totalAmount || '0.00')}</b> goal by{' '}
-          <b>
+          You're planning{' '}
+          <b data-testid="total-amount-yearsInMonths">
+            {differenceYearsInMonths} monthly deposits
+          </b>{' '}
+          to reach your{' '}
+          <b data-testid="total-amount-value">
+            ${money(totalAmount || '0.00')}
+          </b>{' '}
+          goal by{' '}
+          <b data-testid="total-amount-date">
             {months[month]} {year}.
           </b>
         </p>
