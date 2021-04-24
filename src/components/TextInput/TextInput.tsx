@@ -3,15 +3,15 @@ import CurrencyInput from 'react-currency-input';
 
 import { TextInputWrapper, Label, TextInputBox } from './TextInput.style';
 interface Props {
-  amount: string;
-  setAmount: (amount: string) => void;
+  amount: number;
+  setAmount: (amount: number) => void;
 }
 
 export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
   const changeAmount = (
     event: object,
     maskedValue: string,
-    floatValue: string
+    floatValue: number
   ) => {
     setAmount(floatValue);
   };
