@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeInput /> Should render the RangeInput component 1`] = `
+<styled.div>
+  <styled.p>
+    Reach goal by
+  </styled.p>
+  <styled.div>
+    <styled.button
+      data-testid="range-input-decrease"
+      disabled={false}
+      onClick={[Function]}
+      value={3}
+    />
+    <styled.p>
+      <b
+        data-testid="range-input-month"
+      >
+        April
+      </b>
+       
+      <span
+        data-testid="range-input-year"
+      >
+        2025
+      </span>
+    </styled.p>
+    <Styled(styled.button)
+      data-testid="range-input-increase"
+      onClick={[Function]}
+      value={3}
+    />
+  </styled.div>
+</styled.div>
+`;

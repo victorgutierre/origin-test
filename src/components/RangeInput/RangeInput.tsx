@@ -60,11 +60,21 @@ export const RangeInput: React.FC<Props> = ({
       <Label>Reach goal by</Label>
 
       <RangeInputBox>
-        <Decrease onClick={() => decrease()} disabled={disableButton()} />
+        <Decrease
+          data-testid="range-input-decrease"
+          onClick={() => decrease()}
+          value={month}
+          disabled={disableButton()}
+        />
         <Text>
-          <b>{months[month]}</b> {year}
+          <b data-testid="range-input-month">{months[month]}</b>{' '}
+          <span data-testid="range-input-year">{year}</span>
         </Text>
-        <Increase onClick={() => increase()} />
+        <Increase
+          data-testid="range-input-increase"
+          value={month}
+          onClick={() => increase()}
+        />
       </RangeInputBox>
     </RangeInputWrapper>
   );
