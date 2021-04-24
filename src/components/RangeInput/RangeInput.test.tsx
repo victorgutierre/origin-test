@@ -1,8 +1,7 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
-import { fireEvent, queryByTestId, render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { fireEvent, render } from '@testing-library/react';
 import { RangeInput } from './RangeInput';
 import { months } from '../../utils/utils';
 
