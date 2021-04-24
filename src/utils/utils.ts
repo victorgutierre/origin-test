@@ -20,4 +20,4 @@ export const money = (str: string) => {
     .toFixed(2)
     .replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
     .replace(/.(\d{2})$/g, '.$1');
-}
+};
