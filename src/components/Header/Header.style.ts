@@ -6,3 +6,5 @@ export const HeaderContainer = styled.header`
   padding: 1rem 3rem;
   background: #fff;
 `;
+
+HeaderContainer.displayName = 'header';

@@ -18,3 +18,5 @@ export const Btn = styled.button`
     background-color: #111f68;
   }
 `;
+
+Btn.displayName = 'button';

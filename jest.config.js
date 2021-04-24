@@ -11,5 +11,6 @@ module.exports = {
     '\\.(svg|jpg|png|css)$': '<rootDir>/spec/empty-module.js'
   },
   setupFilesAfterEnv: ['<rootDir>spec/setup.js'],
-  moduleDirectories: ['node_modules', 'src']
+  moduleDirectories: ['node_modules', 'src'],
+  snapshotSerializers: ['enzyme-to-json/serializer']
 };

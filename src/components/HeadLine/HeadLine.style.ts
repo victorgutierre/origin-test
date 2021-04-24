@@ -13,3 +13,5 @@ export const H2 = styled.h2`
     padding: 2.8rem 0 1.5rem 0;
   }
 `;
+
+H2.displayName = 'h2';
