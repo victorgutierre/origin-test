@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const Button: React.FC<Props> = ({ label }) => {
-  return <Btn>{label}</Btn>;
+  return <Btn data-testid="button">{label}</Btn>;
 };

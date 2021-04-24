@@ -1,6 +1,7 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import { HeadLine } from './HeadLine';
 
 describe('<Headline />', () => {
@@ -14,13 +15,16 @@ describe('<Headline />', () => {
   });
 
   it('Must contain h2 and strong element', () => {
-    const wrapper = shallow(component);
-    expect(wrapper.find('h2')).toHaveLength(1);
-    expect(wrapper.find('strong')).toHaveLength(1);
+    const { queryByTestId } = render(component);
+    const h2 = queryByTestId('headline');
+    const strong = queryByTestId('headline').querySelector('strong');
+    expect(h2).toBeTruthy();
+    expect(strong).toBeTruthy();
   });
 
   it('Must contain a full sentence', () => {
-    const wrapper = shallow(component);
-    expect(wrapper.text()).toBe("Let's plan your saving goal.");
+    const { queryByTestId } = render(component);
+    const headline = queryByTestId('headline');
+    expect(headline.textContent).toBe("Let's plan your saving goal.");
   });
 });

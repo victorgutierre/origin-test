@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ logo }) => (
-  <HeaderContainer>
-    <img src={logo} width="100" height="50" />
+  <HeaderContainer data-testid="header">
+    <img src={logo} width="100" height="50" data-testid="header-logo" />
   </HeaderContainer>
 );

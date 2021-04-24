@@ -8,7 +8,7 @@ interface Props {
 
 export const HeadLine: React.FC<Props> = ({ firstSentence, boldSentence }) => {
   return (
-    <H2>
+    <H2 data-testid="headline">
       {firstSentence} <strong>{boldSentence}</strong>
     </H2>
   );

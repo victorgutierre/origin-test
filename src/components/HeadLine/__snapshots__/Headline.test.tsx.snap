@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Headline /> Should render Headline component 1`] = `
-<h2>
+<h2
+  data-testid="headline"
+>
   Let's plan your
    
   <strong>

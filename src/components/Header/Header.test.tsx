@@ -1,6 +1,7 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import { Header } from './Header';
 
 describe('<Header />', () => {
@@ -12,20 +13,21 @@ describe('<Header />', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  it('Header component elements render', () => {
-    const wrapper = shallow(component);
-    expect(wrapper.find('header')).toHaveLength(1);
+  it('Header element should render', () => {
+    const { queryByTestId } = render(component);
+    expect(queryByTestId('header')).toBeTruthy();
   });
 
-  it('Contains a tag image inside header', () => {
-    const wrapper = shallow(component);
-    const img = <img src={logo} />;
-    expect(wrapper.containsMatchingElement(img)).toBe(true);
+  it('img element should render', () => {
+    const { queryByTestId } = render(component);
+    expect(queryByTestId('header-logo')).toBeTruthy();
   });
 
   it('Img src should be logo.svg', () => {
-    const wrapper = shallow(component);
-    const img = wrapper.find('img');
-    expect(img.props().src).toBe('./icons/logo.svg');
+    const { queryByTestId } = render(component);
+    const img = queryByTestId('header-logo');
+    const imgSrc = img.getAttribute('src');
+    expect(img).toHaveProperty('src');
+    expect(imgSrc).toBe(logo);
   });
 });

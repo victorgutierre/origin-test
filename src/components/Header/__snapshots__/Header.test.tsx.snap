@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> Should render Header component 1`] = `
-<header>
+<header
+  data-testid="header"
+>
   <img
+    data-testid="header-logo"
     height="50"
     src="./icons/logo.svg"
     width="100"
