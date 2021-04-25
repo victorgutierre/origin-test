@@ -23,6 +23,7 @@ export const TextInput: React.FC<Props> = ({ amount, setAmount }) => {
       <TextInputBox>
         <span>$</span>
         <CurrencyInput
+          inputType="tel"
           data-testid="text-input-currency"
           value={amount}
           onChangeEvent={changeAmount}
