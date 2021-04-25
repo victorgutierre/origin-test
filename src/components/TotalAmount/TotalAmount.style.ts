@@ -29,5 +29,7 @@ export const TotalAmountValue = styled.p`
 export const TotalAmountDetails = styled.div`
   display: block;
   padding: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.2rem;
   background-color: #eaeef2;
 `;
