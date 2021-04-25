@@ -10,7 +10,7 @@ This project requires `Node >=12` and `NPM >= 6`.
 npm install
 ```
 
-  2. Start Nodejs project
+  2. Start application
 ```shell
 npm run dev
 ```
