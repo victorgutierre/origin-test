@@ -31,7 +31,7 @@ export const TextInputBox = styled.div`
     z-index: 1;
   }
 
-  input[type='text'] {
+  input {
     width: 100%;
     height: 4rem;
     padding: 1rem 1rem 1rem 2.5rem;
