@@ -38,6 +38,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
+    "prepare": "husky install",
     "precommit": "npm run lint && npm test",
     "test": "jest",
     "lint": "eslint './src/**/*.{ts,tsx}' --quiet",
