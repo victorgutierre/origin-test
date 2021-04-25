@@ -15,9 +15,7 @@ exports[`<TotalAmount /> Should render the TotalAmount component 1`] = `
   </styled.div>
   <styled.div>
     <p>
-      You
-      &apos;
-      re planning
+      You're planning
        
       <b
         data-testid="total-amount-yearsInMonths"
