@@ -5,7 +5,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { TextInput } from './TextInput';
 
 describe('<TextInput />', () => {
-  const amount = '25000';
+  const amount = 25000;
   const setAmount = jest.fn();
 
   const component = <TextInput amount={amount} setAmount={setAmount} />;

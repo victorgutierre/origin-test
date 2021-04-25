@@ -22,7 +22,7 @@ exports[`<TextInput /> Should render the TextInput component 1`] = `
       selectAllOnFocus={false}
       suffix=""
       thousandSeparator=","
-      value="25000"
+      value={25000}
     />
   </styled.div>
 </styled.div>

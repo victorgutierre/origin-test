@@ -10,12 +10,14 @@ exports[`<TotalAmount /> Should render the TotalAmount component 1`] = `
       data-testid="total-amount-monthly-amount"
     >
       $
-      520.83
+      521.00
     </styled.p>
   </styled.div>
   <styled.div>
     <p>
-      You're planning
+      You
+      &apos;
+      re planning
        
       <b
         data-testid="total-amount-yearsInMonths"

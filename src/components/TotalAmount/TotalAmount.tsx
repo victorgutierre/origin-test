@@ -38,7 +38,7 @@ export const TotalAmount: React.FC<Props> = ({
 
       <TotalAmountDetails>
         <p>
-          You're planning{' '}
+          You{`&apos;`}re planning{' '}
           <b data-testid="total-amount-yearsInMonths">
             {differenceYearsInMonths} monthly deposits
           </b>{' '}
