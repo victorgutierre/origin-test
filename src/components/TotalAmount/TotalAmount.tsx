@@ -21,7 +21,9 @@ export const TotalAmount: React.FC<Props> = ({
   differenceYearsInMonths,
   defaultTotalAmount
 }) => {
-  const value = (defaultTotalAmount / differenceYearsInMonths).toString();
+  const value = Math.round(
+    defaultTotalAmount / differenceYearsInMonths
+  ).toString();
   const totalAmount = defaultTotalAmount.toString();
   const totalValue = money(value) || '0.00';
 
