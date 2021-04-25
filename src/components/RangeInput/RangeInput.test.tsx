@@ -72,6 +72,26 @@ describe('<RangeInput />', () => {
     expect(setYearsInMonths).toHaveBeenCalled();
   });
 
+  it('Press down left keyboard arrow decrease should call month and setYearsInMonths func', () => {
+    const { queryByTestId } = render(component);
+    const element = queryByTestId('range-input-decrease');
+    fireEvent.keyDown(element, { key: 'ArrowLeft', code: 'ArrowLeft' });
+
+    expect(setMonth).toHaveBeenCalled();
+    expect(setYear).not.toHaveBeenCalled();
+    expect(setYearsInMonths).toHaveBeenCalled();
+  });
+
+  it('Press down right keyboard arrow increase should call month and setYearsInMonths func', () => {
+    const { queryByTestId } = render(component);
+    const element = queryByTestId('range-input-increase');
+    fireEvent.keyDown(element, { key: 'ArrowRight', code: 'ArrowRight' });
+
+    expect(setMonth).toHaveBeenCalled();
+    expect(setYear).not.toHaveBeenCalled();
+    expect(setYearsInMonths).toHaveBeenCalled();
+  });
+
   it('Click 1 time decrease should call month and setYearsInMonths func', () => {
     const { queryByTestId } = render(component);
     const element = queryByTestId('range-input-decrease');
@@ -127,6 +147,16 @@ describe('<RangeInput /> when month is current month', () => {
     const { queryByTestId } = render(component);
     const element = queryByTestId('range-input-decrease');
     expect(element.getAttribute('disabled')).toBe('');
+  });
+
+  it('Press down left keyboard arrow decrease should not call month and setYearsInMonths func', () => {
+    const { queryByTestId } = render(component);
+    const element = queryByTestId('range-input-decrease');
+    fireEvent.keyDown(element, { key: 'ArrowLeft', code: 'ArrowLeft' });
+
+    expect(setMonth).not.toHaveBeenCalled();
+    expect(setYear).not.toHaveBeenCalled();
+    expect(setYearsInMonths).not.toHaveBeenCalled();
   });
 });
 

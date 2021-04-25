@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { months } from '../../utils/utils';
 import {
   RangeInputWrapper,
@@ -53,7 +53,22 @@ export const RangeInput: React.FC<Props> = ({
     }
   };
 
-  const disableButton = () => month === actualMonth && year === actualYear;
+  const disableDecrease = () => month === actualMonth && year === actualYear;
+
+  const handleKeyDown = (e: any) => {
+    if (e.keyCode === 37 && !disableDecrease()) {
+      decrease();
+    } else if (e.keyCode === 39) {
+      increase();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  });
 
   return (
     <RangeInputWrapper>
@@ -64,7 +79,7 @@ export const RangeInput: React.FC<Props> = ({
           data-testid="range-input-decrease"
           onClick={() => decrease()}
           value={month}
-          disabled={disableButton()}
+          disabled={disableDecrease()}
         />
         <Text>
           <b data-testid="range-input-month">{months[month]}</b>{' '}
