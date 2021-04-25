@@ -33,5 +33,5 @@ npm run test
 ```
 ## Stack
 ```
-React + Typescript + Styled Components + Jest - Enzyme - React Testint Library
+React + Typescript + Styled Components + Jest(Enzyme / React Testint Library)
 ```
