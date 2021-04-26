@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput, RangeInput, TotalAmount, Button } from './../index';
-import houseImg from './../../icons/academy.svg';
+import houseImg from './../../icons/house.svg';
 import {
   SavingGoalBox,
   Header,
